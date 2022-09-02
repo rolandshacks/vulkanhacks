@@ -1,0 +1,75 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(python) Test gamekitc",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/gamekit/tools/gamekitc.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/build/particles/resources",
+            "args": [
+                "${workspaceFolder}/particles/resources",
+                "${workspaceFolder}/build/particles/resources",
+                "resources"
+            ]
+        },
+        {
+            "name": "(lldb) Launch",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/particles/particles",
+            "args": [],
+            "cwd": "${workspaceFolder}/build/particles",
+            "preLaunchTask": "Build"
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/particles/particles",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/particles",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "args": [],
+            "preLaunchTask": "Build"
+        },
+        {
+            "name": "(cppvsdbg) Launch hello",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/hello/debug/hello.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/hello",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build"
+        },
+        {
+            "name": "(cppvsdbg) Launch particles",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/particles/debug/particles.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/particles",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build"
+        },
+    ]
+}

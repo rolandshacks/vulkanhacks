@@ -1,0 +1,5 @@
+# clang tidy config
+#Checks: 'clang-diagnostic-*,clang-analyzer-*,cppcoreguidelines-*,bugprone-*,modernize-*'
+Checks: 'clang-diagnostic-*,clang-analyzer-*,bugprone-*'
+WarningsAsErrors: 'true'
+HeaderFilterRegex: 'gamekit/*\.h'
